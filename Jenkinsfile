@@ -42,7 +42,7 @@ node {
         sh "sudo cp -R ddd-sample-exposition/src/main/docker/Dockerfile target/"
         sh "sudo cp ddd-sample-exposition/target/*.war target/"
 
-        dockerImage = docker.build('gjudeau/TooCool24', 'target')
+        dockerImage = docker.build('gjudeau/jenkins-repo', 'target')
     }
 
     stage('publish docker') {
