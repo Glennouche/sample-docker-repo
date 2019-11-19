@@ -46,7 +46,7 @@ node {
     }
 
     stage('publish docker') {
-        docker.withRegistry('https://registry.hub.docker.com', 'docker-login') {
+        docker.withRegistry('https://registry.hub.docker.com', 'gjudeau') {
             dockerImage.push 'latest'
         }
     }
